@@ -1,0 +1,22 @@
+import time
+import sys
+
+print("Loading", end="", flush=True)
+
+count = 0
+
+while True:
+    time.sleep(1)
+
+    sys.stdout.write(".")
+    sys.stdout.flush()
+
+    count += 1
+
+    if count == 3:
+        time.sleep(1)
+        # erase the dots
+        sys.stdout.write("\b\b\b   \b\b\b")
+        sys.stdout.flush()
+
+        count = 0
